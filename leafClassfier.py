@@ -1,4 +1,4 @@
-#import numpy as np
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -14,6 +14,7 @@ train=pd.read_csv("train.csv")
 test=pd.read_csv("test.csv")
 def encode(train,test):
     le=LabelEncoder().fit(train.species)
+    print(train.species)
     labels=le.transform(train.species)
     classes=list(le.classes_)
     test_ids=test.id

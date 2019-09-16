@@ -7,7 +7,7 @@ def encode(train,test):
     le=LabelEncoder().fit(train.species)
     print(le)
     labels=le.transform(train.species)
-    #print labels
+    print(labels)
     classes=list(le.classes_)
     test_ids=test.id
     #print test_ids
